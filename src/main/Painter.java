@@ -13,7 +13,11 @@ import java.awt.image.BufferedImage;
  */
 public class Painter extends Canvas implements MouseListener, MouseMotionListener, MouseWheelListener, KeyListener
 {
-    public Main main = null;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -6195076565925614519L;
+	public Main main = null;
     private BufferedImage offscreen = null;
 
     public Painter(Main main)

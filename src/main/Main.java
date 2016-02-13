@@ -22,7 +22,6 @@ public class Main implements ActionListener
     public static final int SPS = 50;
     public static final int SCREEN_WIDTH = Toolkit.getDefaultToolkit().getScreenSize().width;
     public static final int SCREEN_HEIGHT = Toolkit.getDefaultToolkit().getScreenSize().height;
-    private static Main main = null;
     private Timer fpsTimer = new Timer(1000 / FPS, this);
     private Timer spsTimer = new Timer(1000 / SPS, this);
     private World world = null;
@@ -33,7 +32,7 @@ public class Main implements ActionListener
 
     public static void main(String[] args)
     {
-        main = new Main();
+        new Main();
     }
 
     public Main()

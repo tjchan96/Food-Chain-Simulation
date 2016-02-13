@@ -22,7 +22,6 @@ public class Viewer
     private int lastSelectedEntityID = 0;
     private int panSpeed = 10;
     private int mouseWheelRotation = 0;
-    private boolean hasZoomed = false;
     private boolean mouseClicked = false;
     private boolean wKeyPressed = false;
     private boolean sKeyPressed = false;
