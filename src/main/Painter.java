@@ -35,23 +35,17 @@ public class Painter extends Canvas implements MouseListener, MouseMotionListene
     @Override
     public void update(Graphics g)
     {
-        if (main.isOnWindows())
-        {
-            Graphics offgc;
-            Rectangle box = g.getClipBounds();
+        Graphics offgc;
+        Rectangle box = g.getClipBounds();
 
-            offscreen = new BufferedImage(box.width, box.height, BufferedImage.TYPE_INT_RGB);
-            offgc = offscreen.getGraphics();
-            offgc.setColor(getBackground());
-            offgc.fillRect(0, 0, box.width, box.height);
-            offgc.setColor(getForeground());
-            offgc.translate(-box.x, -box.y);
-            paint(offgc);
-            g.drawImage(offscreen, box.x, box.y, this);
-        } else
-        {
-            super.update(g);
-        }
+        offscreen = new BufferedImage(box.width, box.height, BufferedImage.TYPE_INT_RGB);
+        offgc = offscreen.getGraphics();
+        offgc.setColor(getBackground());
+        offgc.fillRect(0, 0, box.width, box.height);
+        offgc.setColor(getForeground());
+        offgc.translate(-box.x, -box.y);
+        paint(offgc);
+        g.drawImage(offscreen, box.x, box.y, this);
     }
 
     @Override
